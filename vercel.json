@@ -8,6 +8,22 @@
         "distDir": "build"
       }
     },
+
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/build/$1"
+    }
+
     {
       "src": "backend/api/webhook.js",
       "use": "@vercel/node"
