@@ -5,15 +5,15 @@ function App() {
   const [messageStatus, setMessageStatus] = useState("");
 
   const sendTelegramMessage = async () => {
-    try {
-      const response = await axios.post("http://localhost:8000/webhook", {
-        message: "/start",  // Simulate user input "/start"
-      });
-      setMessageStatus("Message sent successfully!");
-    } catch (error) {
-      setMessageStatus("Failed to send message.");
-    }
-  };
+  try {
+    await axios.post("http://localhost:8000/webhook", {
+      message: "/start",  // Simulate user input "/start"
+    });
+    setMessageStatus("Message sent successfully!");
+  } catch (error) {
+    setMessageStatus("Failed to send message.");
+  }
+};
 
   return (
     <div className="card">
