@@ -6,7 +6,7 @@ function App() {
 
   const sendTelegramMessage = async () => {
     try {
-      const response = await axios.post("https://rtu-mp-bot-two.vercel.app/webhook", {
+      await axios.post("https://rtu-mp-bot-two.vercel.app/webhook", {
         message: "/start",
       });
       setMessageStatus("Message sent successfully!");
