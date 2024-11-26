@@ -10,8 +10,11 @@
     },
     {
       "src": "backend/api/webhook.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["backend/package.json"]
     }
+  }
   ],
   "routes": [
     {
