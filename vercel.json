@@ -11,6 +11,13 @@
     {
       "src": "backend/api/webhook.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "frontend/src/index.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ]
 }
