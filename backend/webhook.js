@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const TELEGRAM_BOT_TOKEN = '7911027827:AAFmPaq8pUdQSjKOASuMAgrTd9001raAtJ4';
+const TELEGRAM_BOT_TOKEN = '7878343979:AAFQvh66qYa7yMMlYndhbMEJs9I2GAvpk7k';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 module.exports = async (req, res) => {
@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
     if (update.message && update.message.text === '/start') {
       const chatId = update.message.chat.id;
-      const message = "Welcome! Click here to access the web app: https://t.me/rtu_dep_bot/Bobing";
+      const message = "Welcome! Click here to access the web app: https://t.me/rtu_mp_bot/Marketplace";
 
       try {
         const response = await axios.post(TELEGRAM_API_URL, {
