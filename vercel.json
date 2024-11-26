@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/src/index.js",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "backend/webhook.js",
+      "use": "@vercel/node"
+    }
+  ]
+}
