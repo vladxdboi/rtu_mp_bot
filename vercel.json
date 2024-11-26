@@ -6,7 +6,7 @@
       "use": "@vercel/static-build"
     },
     {
-      "src": "backend/webhook.js",
+      "src": "backend/api/webhook.js",
       "use": "@vercel/node"
     }
   ],
