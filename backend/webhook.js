@@ -4,7 +4,6 @@ const TELEGRAM_BOT_TOKEN = '7911027827:AAFmPaq8pUdQSjKOASuMAgrTd9001raAtJ4';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
 module.exports = async (req, res) => {
-  // Only handle POST requests
   if (req.method === 'POST') {
     const update = req.body;
     console.log('Received update:', update);
