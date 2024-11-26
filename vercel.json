@@ -11,13 +11,16 @@
     {
       "src": "backend/api/webhook.js",
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/frontend/build/static/$1"
     },
     {
-      "src": "frontend/src/index.js",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "src": "/(.*)",
+      "dest": "/frontend/build/$1"
     }
   ]
 }
